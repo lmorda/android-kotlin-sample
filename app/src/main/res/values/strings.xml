@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Shopper</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="supermarket_name">Jons</string>
+    <string name="supermarket_subtitle">Fresh organic food</string>
+    <string name="checkout">Checkout</string>
+    <string name="place_order">Place order</string>
+    <string name="content_description_store_logo">Store logo</string>
+    <string name="content_description_item_image">Item image</string>
+    <string name="order_total">Your order total is %s</string>
+    <string name="create_order_error">"Could not create order"</string>
+    <string name="enter_message">Enter message</string>
+    <string name="title_store">Shop</string>
+    <string name="title_buy_again">Buy It Again</string>
+    <string name="title_orders">Orders</string>
+    <string name="title_settings">Settings</string>
+    <string name="whats_new">What\'s new</string>
+    <string name="recommended_for_you">Recommended for you</string>
+    <string name="most_popular">Most popular</string>
+    <string name="order_item_image">Order Item Image</string>
+    <string name="arrival_times">Arrives between %1$s %2$s</string>
+
+    <!-- Invite a Friend -->
+    <string name="invite_shopper_ada">Shopper</string>
+    <string name="invite_give_gift_title">Give the gift of 2 weeks free deliver</string>
+    <string name="invite_gift_copy"><![CDATA[Share your love of Shopper with a friend! They\'ll get 2 weeks free delivery.]]></string>
+    <string name="invite_gift_link">Learn more</string>
+    <string name="invite_share_ada">Share</string>
+    <string name="invite_share_icon_text">SHARE</string>
+    <string name="invite_copy_link_ada">Copy Link</string>
+    <string name="invite_copy_link_icon_text">COPY LINK</string>
+    <string name="invite_link_copied_icon_text">LINK COPIED</string>
+    <string name="invite_message_ada">Message</string>
+    <string name="invite_message_icon_text">MESSAGE</string>
+    <string name="invite_share_order_ada">Share this order</string>
+    <string name="invite_share_order_icon_text">SHARE THIS ORDER</string>
+    <string name="invite_add_cal_ada">Add to calendar</string>
+    <string name="invite_add_cal_icon_text">ADD TO CALENDAR</string>
+    <string name="invite_enjoy_order_title">Enjoy your order!</string>
+    <string name="invite_check_ada">Check</string>
+    <string name="invite_close_ada">Close</string>
+</resources>
