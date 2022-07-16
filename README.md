@@ -6,6 +6,7 @@ Sample Android project inspired by Google's architecture blueprints, using a moc
 * MVVM
 * coroutines
 * Compose
+* Paging3
 * Mockk
 * Espresso
 
