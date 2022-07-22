@@ -23,6 +23,7 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.lmorda.shopper.R
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -46,7 +47,7 @@ fun InviteAFriend(
         Close(inviteAFriendActions)
         Checkmark()
         Spacer(modifier = Modifier.height(16.dp))
-        EnjoyYourOrder()
+        RefactoringRocks()
         Spacer(modifier = Modifier.height(16.dp))
         Row(
             modifier = Modifier
@@ -154,7 +155,7 @@ private fun Checkmark() {
 }
 
 @Composable
-private fun EnjoyYourOrder() {
+private fun RefactoringRocks() {
     Text(
         text = stringResource(R.string.invite_enjoy_order_title),
         modifier = Modifier

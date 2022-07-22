@@ -19,6 +19,8 @@
     <string name="most_popular">Most popular</string>
     <string name="order_item_image">Order Item Image</string>
     <string name="arrival_times">Arrives between %1$s %2$s</string>
+    <string name="food_description">Food</string>
+    <string name="back_button_description">Back button</string>
 
     <!-- Invite a Friend -->
     <string name="invite_shopper_ada">Shopper</string>

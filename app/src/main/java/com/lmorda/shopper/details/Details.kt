@@ -12,6 +12,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -57,7 +58,7 @@ private fun FoodItem(
 private fun FoodImage(foodItem: FoodItem, modifier: Modifier) {
     Image(
         painter = painterResource(id = foodItem.imageRes),
-        contentDescription = "Food",
+        contentDescription = stringResource(id = R.string.food_description),
         modifier = modifier.then(
             Modifier
                 .height(200.dp)
@@ -71,7 +72,7 @@ private fun FoodImage(foodItem: FoodItem, modifier: Modifier) {
 private fun BackButton(backBtnListener: () -> Unit) {
     Image(
         painter = painterResource(id = R.drawable.ic_baseline_arrow_back_24),
-        contentDescription = "Back button",
+        contentDescription = stringResource(id = R.string.back_button_description),
         modifier = Modifier
             .padding(start = 16.dp)
             .clickable(

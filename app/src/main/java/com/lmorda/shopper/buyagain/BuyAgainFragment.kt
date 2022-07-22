@@ -58,22 +58,18 @@ class BuyAgainFragment : Fragment() {
             viewModel.getCartNum()
         }
 
+        viewModel.orderCreated.observe(viewLifecycleOwner) { success ->
+            creatingOrder = false
+            when (success) {
+                true -> findNavController().navigate(R.id.action_buyAgainFragment_to_cartFragment)
+                else -> Snackbar.make(view, resources.getString(R.string.create_order_error), LENGTH_SHORT).show()
+            }
+        }
+
         binding.cartPill.setOnClickListener {
             if (creatingOrder || numItems == 0) return@setOnClickListener
             creatingOrder = true
-            viewModel.createOrder().observe(viewLifecycleOwner) {
-                if (it == true) {
-                    creatingOrder = false
-                    findNavController().navigate(R.id.action_buyAgainFragment_to_cartFragment)
-                } else {
-                    creatingOrder = false
-                    Snackbar.make(
-                        view,
-                        resources.getString(R.string.create_order_error),
-                        LENGTH_SHORT
-                    ).show()
-                }
-            }
+            viewModel.createOrder()
         }
         viewModel.getCartNum()
 

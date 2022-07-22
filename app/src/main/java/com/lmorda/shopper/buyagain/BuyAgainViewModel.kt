@@ -15,6 +15,9 @@ class BuyAgainViewModel(private val shopperRepository: ShopperRepository) : View
     private val _cartNum = MutableLiveData<Int>()
     val cartNum: LiveData<Int> = _cartNum
 
+    private val _orderCreated = MutableLiveData<Boolean>()
+    val orderCreated: LiveData<Boolean> = _orderCreated
+
     fun getCartNum() = viewModelScope.launch {
         _cartNum.postValue(shopperRepository.getCartNum())
     }
@@ -25,7 +28,8 @@ class BuyAgainViewModel(private val shopperRepository: ShopperRepository) : View
         }
 
 
-    fun createOrder() = liveData {
-        emit(shopperRepository.createOrder())
-    }
+    fun createOrder() =
+        viewModelScope.launch {
+            _orderCreated.postValue(shopperRepository.createOrder())
+        }
 }
