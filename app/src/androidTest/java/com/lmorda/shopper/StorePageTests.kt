@@ -109,6 +109,7 @@ class StorePageTests {
         // Add item to cart, then go to cart
         onView(allOf(withId(R.id.cbItem), hasSibling(withText("Wurth Ketchup"))))
             .perform(click())
+        onView(withId(R.id.numItems)).check(matches(withText("1")))
         onView(withId(R.id.cart_pill)).perform(click())
         // Click complete purchase
         onView(withId(R.id.btnPlaceOrder)).perform(click())
@@ -118,10 +119,9 @@ class StorePageTests {
         composeTestRule.onNodeWithText("Enjoy your order!").assertIsDisplayed()
         // Click invite close button
         composeTestRule.onNode(hasTestTag("CloseButton")).performClick()
-        // Click Order details close button
-        onView(withId(R.id.closeOrderBtn)).perform(click())
         // Verify sent back to home page
         onView(withId(R.id.storeTitle)).check(matches(withText("Jons")))
+        onView(withId(R.id.numItems)).check(matches(withText("0")))
         activityScenario.close()
     }
 }
