@@ -10,7 +10,7 @@ interface InviteFriendActions {
 
     val navController: NavController?
 
-    fun closeClickListener() = navController?.navigate(R.id.action_inviteFragment_to_arrivalFragment)
+    fun closeClickListener() = navController?.navigate(R.id.action_inviteFragment_to_storeFragment)
     fun addToCalendarClickListener() = Log.d("Shopper", "TODO: addToCalendarClickListener")
     fun shareThisOrderClickListener() = Log.d("Shopper", "TODO: shareThisOrderClickListener")
     fun learnMoreClickListener() = Log.d("Shopper", "TODO: learnMoreClickListener")

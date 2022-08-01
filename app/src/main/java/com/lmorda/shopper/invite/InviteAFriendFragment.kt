@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
-import com.lmorda.shopper.R
+import com.lmorda.shopper.INVITE_FRAGMENT
+import com.lmorda.shopper.STATUS_FRAGMENT
+import com.lmorda.shopper.ShopperActivity
+import com.lmorda.shopper.ShopperActivity.Companion.FRAGMENT_TAG
 
 class InviteAFriendFragment : Fragment() {
 
@@ -18,6 +20,7 @@ class InviteAFriendFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         return ComposeView(requireContext()).apply {
+            FRAGMENT_TAG = INVITE_FRAGMENT
             setContent {
                 InviteAFriend(InviteAFriendActions(findNavController()))
             }

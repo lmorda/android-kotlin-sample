@@ -7,12 +7,12 @@
 
         <SwitchPreferenceCompat
             app:key="notifications"
-            app:title="Enable message notifications"/>
+            app:title="TODO: Add a setting lol"/>
 
         <Preference
             app:key="feedback"
             app:title="Send feedback"
-            app:summary="Report technical issues or suggest new features"/>
+            app:summary="Literally does nothing if you click this"/>
 
     </PreferenceCategory>
 

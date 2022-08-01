@@ -23,7 +23,6 @@ import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.constraintlayout.widget.ConstraintLayout
 import com.lmorda.shopper.R
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -47,7 +46,7 @@ fun InviteAFriend(
         Close(inviteAFriendActions)
         Checkmark()
         Spacer(modifier = Modifier.height(16.dp))
-        RefactoringRocks()
+        EnjoyYourOrder()
         Spacer(modifier = Modifier.height(16.dp))
         Row(
             modifier = Modifier
@@ -155,14 +154,14 @@ private fun Checkmark() {
 }
 
 @Composable
-private fun RefactoringRocks() {
+private fun EnjoyYourOrder() {
     Text(
         text = stringResource(R.string.invite_enjoy_order_title),
         modifier = Modifier
             .fillMaxWidth(),
         textAlign = TextAlign.Center,
         fontWeight = FontWeight.SemiBold,
-        fontSize = 18.sp
+        fontSize = 22.sp
     )
 }
 
@@ -181,7 +180,7 @@ private fun AddToCalendar() {
         modifier = Modifier
             .fillMaxWidth(),
         textAlign = TextAlign.Center,
-        fontSize = 10.sp
+        fontSize = 12.sp
     )
 }
 
@@ -200,7 +199,7 @@ private fun ShareThisOrder() {
         modifier = Modifier
             .fillMaxWidth(),
         textAlign = TextAlign.Center,
-        fontSize = 10.sp
+        fontSize = 12.sp
     )
 }
 
@@ -220,7 +219,7 @@ private fun Message() {
         modifier = Modifier
             .fillMaxWidth(),
         textAlign = TextAlign.Center,
-        fontSize = 10.sp
+        fontSize = 12.sp
     )
 }
 
@@ -229,17 +228,17 @@ private fun GiveTheGift(inviteAFriendActions: InviteAFriendActions?) {
     Text(
         stringResource(R.string.invite_give_gift_title),
         fontWeight = FontWeight.SemiBold,
-        fontSize = 14.sp
+        fontSize = 15.sp
     )
     Spacer(modifier = Modifier.height(8.dp))
     Text(
         stringResource(R.string.invite_gift_copy),
-        fontSize = 13.sp,
+        fontSize = 15.sp,
         color = Color(0xFF696C73)
     )
     Spacer(modifier = Modifier.height(8.dp))
     Text(stringResource(R.string.invite_gift_link), color = Color(0xFFD7612E),
-        fontSize = 13.sp,
+        fontSize = 15.sp,
         style = TextStyle(textDecoration = TextDecoration.Underline),
         modifier = Modifier
             .clickable { inviteAFriendActions?.learnMoreClickListener() }
@@ -273,7 +272,7 @@ private fun CopyLink(count: Int) {
             modifier = Modifier
                 .fillMaxWidth(),
             textAlign = TextAlign.Center,
-            fontSize = 10.sp
+            fontSize = 12.sp
         )
     }
 }
@@ -293,7 +292,7 @@ private fun Share() {
         modifier = Modifier
             .fillMaxWidth(),
         textAlign = TextAlign.Center,
-        fontSize = 10.sp
+        fontSize = 12.sp
     )
 }
 

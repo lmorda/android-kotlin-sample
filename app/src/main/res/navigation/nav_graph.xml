@@ -98,28 +98,14 @@
     </fragment>
 
     <fragment
-        android:id="@+id/arrivalFragment"
-        android:name="com.lmorda.shopper.arrival.ArrivalFragment"
-        android:label="ArrivalFragment"
-        tools:layout="@layout/fragment_arrival">
-
-        <action
-            android:id="@+id/action_arrivalFragment_to_storeFragment"
-            app:destination="@id/storeFragment"
-            app:popUpTo="@+id/storeFragment"
-            app:popUpToInclusive="true" />
-
-    </fragment>
-
-    <fragment
         android:id="@+id/inviteFriendFragment"
         android:name="com.lmorda.shopper.invite.InviteAFriendFragment"
         android:label="InviteAFriendFragment">
 
         <action
-            android:id="@+id/action_inviteFragment_to_arrivalFragment"
-            app:destination="@id/arrivalFragment"
-            app:popUpTo="@+id/arrivalFragment"
+            android:id="@+id/action_inviteFragment_to_storeFragment"
+            app:destination="@id/storeFragment"
+            app:popUpTo="@+id/storeFragment"
             app:popUpToInclusive="true" />
 
     </fragment>

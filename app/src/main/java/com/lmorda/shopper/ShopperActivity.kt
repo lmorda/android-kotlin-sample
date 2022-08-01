@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -12,6 +13,7 @@ import com.lmorda.shopper.databinding.ActivityMainBinding
 class ShopperActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -20,8 +22,8 @@ class ShopperActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        navController = findNavController(R.id.nav_host_fragment)
         val navView: BottomNavigationView = binding.navView
-        val navController = findNavController(R.id.nav_host_fragment)
         navView.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
@@ -35,4 +37,18 @@ class ShopperActivity : AppCompatActivity() {
         }
     }
 
+    @Deprecated("Deprecated in Java")
+    override fun onBackPressed() =
+        when (FRAGMENT_TAG) {
+            STATUS_FRAGMENT -> {}
+            INVITE_FRAGMENT -> {
+                FRAGMENT_TAG = ""
+                navController.navigate(R.id.action_inviteFragment_to_storeFragment)
+            }
+            else -> super.onBackPressed()
+        }
+
+    companion object {
+        var FRAGMENT_TAG = ""
+    }
 }

@@ -12,6 +12,9 @@ import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.lmorda.shopper.ORDER_COMPLETE
 import com.lmorda.shopper.R
+import com.lmorda.shopper.STATUS_FRAGMENT
+import com.lmorda.shopper.ShopperActivity
+import com.lmorda.shopper.ShopperActivity.Companion.FRAGMENT_TAG
 import com.lmorda.shopper.databinding.FragmentStatusBinding
 import com.lmorda.shopper.utils.getViewModelFactory
 import kotlinx.coroutines.delay
@@ -24,7 +27,7 @@ class StatusFragment : Fragment() {
 
     private val viewModel by viewModels<StatusViewModel> { getViewModelFactory() }
 
-    private val CONFETTI_TIME = 5000L
+    private val CONFETTI_TIME = 3000L
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -35,6 +38,7 @@ class StatusFragment : Fragment() {
         val binding = FragmentStatusBinding.inflate(inflater, container, false)
         val view = binding.root
 
+        FRAGMENT_TAG = STATUS_FRAGMENT
         viewModel.getOrderStatus().observe(viewLifecycleOwner) {
             binding.orderStatus.text = it
             if (it == ORDER_COMPLETE) {
